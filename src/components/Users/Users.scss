@@ -1,0 +1,14 @@
+.list{
+    display: flex;
+
+    .listContainer{
+       
+        flex: 7;
+
+        .data{
+           
+            padding: 20px;
+            
+        }
+    }
+}
