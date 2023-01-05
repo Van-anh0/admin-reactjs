@@ -29,7 +29,7 @@ const ModalMovie = ({ handleClickModal }) => {
       movie.spoil &&
       movie.trailer &&
       movie.duration &&
-      movie.format &&
+      movie.format_movie &&
       movie.status
     ) {
       return true;
@@ -126,9 +126,9 @@ const ModalMovie = ({ handleClickModal }) => {
             <Select
               labelId="demo-simple-select-helper-label"
               id="demo-simple-select-helper"
-              value={movie.format}
-              label="Format"
-              name="format"
+              value={movie.format_movie}
+              label="format_movie"
+              name="format_movie"
               onChange={handleChange}
             >
               <MenuItem value={"2D"}>2D</MenuItem>
