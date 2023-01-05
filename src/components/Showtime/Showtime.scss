@@ -1,0 +1,18 @@
+.showtime__list_movie__item_content {
+  display: flex;
+  .showtime__list_movie__item__img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  button {
+    height: 40px;
+  }
+}
+.room_item__showtime {
+  display: flex;
+}

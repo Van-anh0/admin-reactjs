@@ -6,20 +6,10 @@ import LiveTvIcon from "@mui/icons-material/LiveTv";
 import { useNavigate } from "react-router-dom";
 function Sliderbar() {
   let navigate = useNavigate();
-  const routeChangeMovies = () => {
-    let path = `/movies`;
+  function changeRoute(path) {
     navigate(path);
-  };
+  }
 
-  const routeChangeHome = () => {
-    let path = `/`;
-    navigate(path);
-  };
-
-  const routeChangeUsers = () => {
-    let path = `/users`;
-    navigate(path);
-  };
   return (
     <div className="slider">
       <div className="top">
@@ -28,15 +18,27 @@ function Sliderbar() {
       <hr />
       <div className="center">
         <ul>
-          <li onClick={routeChangeHome}>
+          <li onClick={() => changeRoute("/")}>
             <DashboardIcon />
             <span>Dashboard</span>
           </li>
-          <li onClick={routeChangeMovies}>
+          <li onClick={() => changeRoute("/cinema")}>
+            <PersonIcon />
+            <span>Cinema</span>
+          </li>
+          <li onClick={() => changeRoute("/movies")}>
             <LiveTvIcon />
             <span>Movies</span>
           </li>
-          <li onClick={routeChangeUsers}>
+          <li onClick={() => changeRoute("/showtime")}>
+            <PersonIcon />
+            <span>Showtime</span>
+          </li>
+          <li onClick={() => changeRoute("/product")}>
+            <PersonIcon />
+            <span>Product</span>
+          </li>
+          <li onClick={() => changeRoute("/users")}>
             <PersonIcon />
             <span>Users</span>
           </li>
