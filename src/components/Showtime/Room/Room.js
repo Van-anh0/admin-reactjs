@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { roomApi, showtimeApi } from "actions";
-import ShowItem from "components/Showtime/ShowItem/ShowItem";
+
+import ListShowtime from "components/Showtime/ListShowtime/ListShowtime";
+import ShowtimeSuggest from "components/Showtime/ShowTimeSuggest/ShowtimeSuggest";
 
 function Room({ movie, setOpenRoom, cinemaId }) {
   const [showtimeByRoom, setShowtimeByRoom] = useState({});
@@ -21,11 +23,9 @@ function Room({ movie, setOpenRoom, cinemaId }) {
     try {
       const response = await roomApi.getListRoom(movieId, cinemaId);
       // filter list room not match with list room match
-      console.log(response.data);
       let listMismatch = response.data.filter(
         (item) => !listRoomMatch.includes(item)
       );
-      console.log(listMismatch);
       setListRoomMistmatch(listMismatch);
     } catch (error) {
       console.log("Failed to fetch list cinema: ", error);
@@ -52,7 +52,6 @@ function Room({ movie, setOpenRoom, cinemaId }) {
   }
 
   function getListStringRoomId(listRoom) {
-    console.log(listRoom);
     let listStringRoomId = "";
     listRoom.forEach((item) => {
       listStringRoomId += item.id + ",";
@@ -73,21 +72,20 @@ function Room({ movie, setOpenRoom, cinemaId }) {
       <div className="movie_item__room__item">
         {listRoomMatch?.length > 0 ? (
           listRoomMatch.map((item) => (
-            <div key={item.key}>
+            <div key={item.id}>
               <div>{item.name}</div>
-              <ShowItem listShowtime={showtimeByRoom[item.id]} />
+              <ListShowtime listShowtime={showtimeByRoom[item.id]} />
             </div>
           ))
         ) : (
           <div></div>
         )}
         {listRoomMistmatch.length > 0 ? (
-          listRoomMistmatch.map((item) => (
-            <div key={item.key}>
-              <div>{item.name}</div>
-              <div>
-                <button>Thêm suất chiếu</button>
-              </div>
+          listRoomMistmatch.map((room) => (
+            <div key={room.id}>
+              <div>{room.name}</div>
+              {/** add showtime */}
+              <ShowtimeSuggest movie={movie} roomId={room.id} />
             </div>
           ))
         ) : (
