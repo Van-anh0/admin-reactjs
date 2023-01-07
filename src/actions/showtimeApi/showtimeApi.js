@@ -15,6 +15,25 @@ const showtimeApi = {
     );
     return request.data;
   },
+  getList: async (cinemaId) => {
+    let params = {
+      params: {
+        cinema_id: cinemaId,
+      },
+    };
+    const request = await authorizedAxiosInstance.get(
+      `${API_ROOT_GOLANG}/api/v1/show/get-list`,
+      params
+    );
+    return request.data;
+  },
+  createMultiple: async (data) => {
+    const request = await authorizedAxiosInstance.post(
+      `${API_ROOT_GOLANG}/api/v1/show/create-multiple`,
+      data
+    );
+    return request.data;
+  },
 };
 
 export default showtimeApi;
