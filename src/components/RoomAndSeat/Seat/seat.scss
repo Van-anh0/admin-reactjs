@@ -1,0 +1,16 @@
+.seat_item {
+  width: 30px;
+  height: 30px;
+  margin: 5px;
+  border-radius: 50%;
+  background-color: #e2a114;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  text-align: center;
+  line-height: 30px;
+  font-weight: bold;
+  cursor: pointer;
+  &.active {
+    background-color: #f00;
+  }
+}

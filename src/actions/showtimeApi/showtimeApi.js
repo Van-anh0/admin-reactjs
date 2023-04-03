@@ -2,6 +2,14 @@ import authorizedAxiosInstance from "utils/customAxios";
 import { API_ROOT_GOLANG } from "utils/constants";
 
 const showtimeApi = {
+  createShowtime: async (data) => {
+    const request = await authorizedAxiosInstance.post(
+      `${API_ROOT_GOLANG}/api/v1/show/create`,
+      data
+    );
+    return request.data;
+  },
+  
   getlistShowtimeByRoom: async (listRoomId, movieId) => {
     let params = {
       params: {

@@ -24,10 +24,10 @@ export default function MoviesTable(props) {
             <TableCell>Chỉnh sửa</TableCell>
             <TableCell align="left">Tên phim</TableCell>
             <TableCell align="left">Hình ảnh</TableCell>
-            <TableCell align="right">Ngày chiếu</TableCell>
-            <TableCell align="right">Trạng thái</TableCell>
-            <TableCell align="right">Ngày kết thúc</TableCell>
-            <TableCell align="right">Active</TableCell>
+            {/* <TableCell align="right">Ngày chiếu</TableCell> */}
+            {/* <TableCell align="right">Trạng thái</TableCell> */}
+            {/* <TableCell align="right">Ngày kết thúc</TableCell> */}
+            {/* <TableCell align="right">Active</TableCell> */}
           </TableRow>
         </TableHead>
         <TableBody>
@@ -51,9 +51,9 @@ export default function MoviesTable(props) {
                 }
                 className="movie_image"
               ></img>
-              <TableCell align="right">{row.release_date}</TableCell>
-              <TableCell align="right">{row.status}</TableCell>
-              <TableCell align="right">{row.end_date}</TableCell>
+              {/* <TableCell align="right">{row.release_date}</TableCell> */}
+              {/* <TableCell align="right">{row.status}</TableCell> */}
+              {/* <TableCell align="right">{row.end_date}</TableCell> */}
             </TableRow>
           ))}
         </TableBody>
