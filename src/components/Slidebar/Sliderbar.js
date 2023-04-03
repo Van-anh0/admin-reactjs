@@ -3,6 +3,9 @@ import "../Slidebar/Sliderbar.scss";
 import DashboardIcon from "@mui/icons-material/Dashboard";
 import PersonIcon from "@mui/icons-material/Person";
 import LiveTvIcon from "@mui/icons-material/LiveTv";
+import RoomAndSeat from "@mui/icons-material/MeetingRoomOutlined"
+import Product from "@mui/icons-material/LocalGroceryStoreOutlined";
+import Showtime from "@mui/icons-material/LocalMoviesOutlined";
 import { useNavigate } from "react-router-dom";
 function Sliderbar() {
   let navigate = useNavigate();
@@ -20,27 +23,31 @@ function Sliderbar() {
         <ul>
           <li onClick={() => changeRoute("/")}>
             <DashboardIcon />
-            <span>Dashboard</span>
+            <span>Bảng điều khiển</span>
           </li>
           <li onClick={() => changeRoute("/cinema")}>
             <PersonIcon />
-            <span>Cinema</span>
+            <span>Rạp</span>
+          </li>
+          <li onClick={() => changeRoute("/room")}>
+            <RoomAndSeat />
+            <span>Phòng chiếu & ghế ngồi</span>
           </li>
           <li onClick={() => changeRoute("/movies")}>
             <LiveTvIcon />
-            <span>Movies</span>
+            <span>Phim</span>
           </li>
           <li onClick={() => changeRoute("/showtime")}>
-            <PersonIcon />
-            <span>Showtime</span>
+            <Showtime />
+            <span>Suất chiếu</span>
           </li>
           <li onClick={() => changeRoute("/product")}>
-            <PersonIcon />
-            <span>Product</span>
+            <Product />
+            <span>Sản phẩm</span>
           </li>
           <li onClick={() => changeRoute("/users")}>
             <PersonIcon />
-            <span>Users</span>
+            <span>Người dùng</span>
           </li>
         </ul>
       </div>

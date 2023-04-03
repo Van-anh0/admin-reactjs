@@ -23,14 +23,14 @@ const ModalMovie = ({ handleClickModal }) => {
 
   function checkMovie() {
     if (
-      movie.name &&
-      movie.type &&
-      movie.director &&
-      movie.spoil &&
-      movie.trailer &&
-      movie.duration &&
-      movie.format_movie &&
-      movie.status
+      movie.name
+      // &&movie.type &&
+      // movie.director &&
+      // movie.spoil &&
+      // movie.trailer &&
+      // movie.duration &&
+      // movie.format_movie &&
+      // movie.status
     ) {
       return true;
     } else {
@@ -67,6 +67,14 @@ const ModalMovie = ({ handleClickModal }) => {
               required
             />
             <TextField
+              id="outlined-basic"
+              label="Hình ảnh"
+              variant="outlined"
+              name="poster"
+              onChange={handleChange}
+              // required
+            />
+            {/* <TextField
               id="outlined-basic"
               label="Thể loại"
               variant="outlined"
@@ -105,14 +113,7 @@ const ModalMovie = ({ handleClickModal }) => {
               onChange={handleChange}
               required
             />
-            <TextField
-              id="outlined-basic"
-              label="Hình ảnh"
-              variant="outlined"
-              name="poster"
-              onChange={handleChange}
-              // required
-            />
+            
             <TextField
               id="date"
               label="Ngày khởi chiếu"
@@ -168,7 +169,7 @@ const ModalMovie = ({ handleClickModal }) => {
               variant="outlined"
               name="rated"
               onChange={handleChange}
-            />
+            /> */}
             <TextField type="submit" onClick={() => handleOnCreateMovie()} />
           </form>
         </div>
