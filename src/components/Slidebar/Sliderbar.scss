@@ -1,7 +1,7 @@
 .slider {
-  flex: 1;
   border-right: 0.5px solid lightgray;
   min-height: 100vh;
+  background-color: #19376D;
   .top {
     height: 50px;
     display: flex;
@@ -9,45 +9,53 @@
     justify-content: center;
 
     .logo {
-      font-size: 20px;
+      font-size: 30px;
       font-weight: bold;
-      color: #6439ff;
+      color: white;
     }
   }
 
   .center {
-    padding-left: 10px;
-
     ul {
       list-style: none;
       margin: 0;
       padding: 0;
+      
     }
 
     li {
       height: 35px;
-      background: wheat;
-      svg {
-        height: 18px;
-        width: 20px;
-        color: #7451f8;
-        padding-right: 5px;
-      }
       display: flex;
       text-align: center;
       padding: 5px;
       cursor: pointer;
-
-      font-size: 16px;
+      font-size: 20px;
       font-weight: 600;
-      color: #888;
+      align-items: center;
+      svg {
+        height: 23px;
+        width: 30px;
+        padding-right: 5px;
+      }
+      &.default{
+        color: #cfcfcf;
+        svg {
+          color: #cfcfcf;
+        }
+      }
+      &.active{
+        background-color: #576CBC;
+        color: white;
+        svg {
+          color: white;
+        }
+      }
 
       &:hover {
-        background-color: #8665fa;
+        background-color: #576CBC;
         color: white;
-
         svg {
-          color: rgb(255, 194, 194);
+          color: white;
         }
       }
     }
@@ -55,6 +63,6 @@
 
   hr {
     height: 0;
-    border: 0.5px solid lightgray;
+    border: 0.5px solid white;
   }
 }

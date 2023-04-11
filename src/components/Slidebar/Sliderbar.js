@@ -7,7 +7,9 @@ import RoomAndSeat from "@mui/icons-material/MeetingRoomOutlined"
 import Product from "@mui/icons-material/LocalGroceryStoreOutlined";
 import Showtime from "@mui/icons-material/LocalMoviesOutlined";
 import { useNavigate } from "react-router-dom";
+import { useFindPath } from "hooks/useFindPath";
 function Sliderbar() {
+  const path = useFindPath();
   let navigate = useNavigate();
   function changeRoute(path) {
     navigate(path);
@@ -21,31 +23,56 @@ function Sliderbar() {
       <hr />
       <div className="center">
         <ul>
-          <li onClick={() => changeRoute("/")}>
+          <li onClick={() => changeRoute("/")}
+          className={
+            path === "/" ? "active" : "default"
+          }
+          >
             <DashboardIcon />
             <span>Bảng điều khiển</span>
           </li>
-          <li onClick={() => changeRoute("/cinema")}>
+          <li onClick={() => changeRoute("/cinema")}
+          className={
+            path === "/cinema" ? "active" : "default"
+          }
+          >
             <PersonIcon />
             <span>Rạp</span>
           </li>
-          <li onClick={() => changeRoute("/room")}>
+          <li onClick={() => changeRoute("/room")}
+          className={
+            path === "/room" ? "active" : "default"
+          }
+          >
             <RoomAndSeat />
             <span>Phòng chiếu & ghế ngồi</span>
           </li>
-          <li onClick={() => changeRoute("/movies")}>
+          <li onClick={() => changeRoute("/movies")}
+          className={
+            path === "/movies" ? "active" : "default"
+          }
+          >
             <LiveTvIcon />
             <span>Phim</span>
           </li>
-          <li onClick={() => changeRoute("/showtime")}>
+          <li onClick={() => changeRoute("/showtime")}
+          className={
+            path === "/showtime" ? "active" : "default"
+          }>
             <Showtime />
             <span>Suất chiếu</span>
           </li>
-          <li onClick={() => changeRoute("/product")}>
+          <li onClick={() => changeRoute("/product")}
+          className={
+            path === "/product" ? "active" : "default"
+          }>
             <Product />
             <span>Sản phẩm</span>
           </li>
-          <li onClick={() => changeRoute("/users")}>
+          <li onClick={() => changeRoute("/users")}
+          className={
+            path === "/users" ? "active" : "default"
+          }>
             <PersonIcon />
             <span>Người dùng</span>
           </li>

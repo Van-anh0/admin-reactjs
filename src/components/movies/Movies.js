@@ -1,7 +1,6 @@
 import React from "react";
 import "./Movies.scss";
 import Sliderbar from "../Slidebar/Sliderbar";
-import Navbar from "../Navbar/Navbar";
 import MoviesTable from "../data/MoviesTable";
 import { useEffect, useState } from "react";
 import { userApi } from "actions";
@@ -24,7 +23,6 @@ function Movies() {
   return (
     <div className="list">
       <div className="listContainer">
-        <Navbar />
         {showModalMovie ? (
           <ModalMovie handleClickModal={handleClickModal} />
         ) : (

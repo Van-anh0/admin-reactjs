@@ -1,12 +1,12 @@
 import React from "react";
 
-import Home from "./components/home/Home";
+import Home from "./pages/home/Home";
 import List from "./components/Users/Users";
 import Movies from "./components/movies/Movies";
 import NewMovies from "./components/movies/NewMovies/NewMovies";
 import Showtime from "./components/Showtime/Showtime";
-import Cinema from "./components/Cinema/Cinema";
-import Product from "./components/Product/Product";
+import Cinema from "./pages/Cinema/Cinema";
+import Product from "./pages/Product/Product";
 import RoomAndSeat from "./components/RoomAndSeat/RoomAndSeat";
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
@@ -21,6 +21,7 @@ function App() {
         <Sliderbar className="slider" />
         <Routes>
           <Route path="/">
+            <Route index element={<Home/>}/>
             <Route path="cinema" element={<Cinema />} />
             <Route path="product" element={<Product />} />
             <Route path="movies" element={<Movies />} />
