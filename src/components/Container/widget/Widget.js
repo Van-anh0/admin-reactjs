@@ -1,5 +1,5 @@
 import React from "react";
-import "../widget/Widget.scss";
+import "./Widget.scss";
 
 function Widget() {
   return (

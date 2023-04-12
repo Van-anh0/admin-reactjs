@@ -20,14 +20,19 @@ function Header() {
                     English
                 </div>
 
-                <IoMdNotificationsOutline/>
+                <div className="nofi">
+                    <IoMdNotificationsOutline/>
+                    <div className="number">
+                        3
+                    </div>
+                </div>
                 
                 <div className="user">
                 <img src="https://freenice.net/wp-content/uploads/2021/08/hinh-anh-avatar-dep.jpg" alt="" />
                 Henry
                 </div>
 
-                <FiSettings/>
+                <FiSettings className="setting"/>
            
             </div>
         </div>

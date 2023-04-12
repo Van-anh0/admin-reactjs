@@ -1,22 +1,12 @@
 import React from "react";
-import "./Home.scss";
-import Widget from "../../components/widget/Widget";
 import Header from "../../components/Header/Header";
+import Container from "components/Container/Container";
+
 function Home() {
   return (
     <div>
       <Header/>
-      <div className="homeContainer">
-        <div className="widgets">
-          <Widget />
-          <Widget />
-          <Widget />
-          <Widget />
-          <Widget />
-          <Widget />
-          <Widget />
-        </div>
-      </div>
+      <Container/>
     </div>
   );
 }

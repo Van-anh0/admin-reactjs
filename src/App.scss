@@ -1,7 +1,9 @@
 .App {
   display: flex;
   .slider {
-    max-width: 18%;
     flex: 1;
+  }
+  .other{
+    flex: 4;
   }
 }

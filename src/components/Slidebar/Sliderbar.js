@@ -47,9 +47,9 @@ function Sliderbar() {
             <RoomAndSeat />
             <span>Phòng chiếu & ghế ngồi</span>
           </li>
-          <li onClick={() => changeRoute("/movies")}
+          <li onClick={() => changeRoute("/movie")}
           className={
-            path === "/movies" ? "active" : "default"
+            path === "/movie" ? "active" : "default"
           }
           >
             <LiveTvIcon />
@@ -69,9 +69,9 @@ function Sliderbar() {
             <Product />
             <span>Sản phẩm</span>
           </li>
-          <li onClick={() => changeRoute("/users")}
+          <li onClick={() => changeRoute("/user")}
           className={
-            path === "/users" ? "active" : "default"
+            path === "/user" ? "active" : "default"
           }>
             <PersonIcon />
             <span>Người dùng</span>
